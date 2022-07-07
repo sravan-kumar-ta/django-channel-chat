@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <div class="position-absolute top-50 start-50 translate-middle border border-info rounded col-lg-6 col-md-10 col-sm-12" style="height: 80%;">
+        <div style="height: 10%;" class="border d-flex align-items-center justify-content-between">
+            <h5 class="mx-3">Dr. Satheesh</h5>
+            <a href="" class="btn btn-outline-danger btn-sm mx-3">Close chat</a>
+        </div>
+
+
+        <div style="height: 80%; overflow: auto;" class="border">
+            <div class="chat-message-left pb-4 mx-3">
+                <div class="mx-2">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="rounded-circle mr-1" alt="Sharon Lessman" width="30" height="30">
+                </div>
+                <div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
+                    <div class="font-weight-bold mb-1 text-success">Sharon Lessman</div>
+                    Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+                    Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+                </div>
+            </div>
+
+            <div class="chat-message-right mb-4 mx-3">
+                <div class="mx-2">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle mr-1" alt="Chris Wood" width="30" height="30">
+                </div>
+                <div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                    <div class="font-weight-bold mb-1 text-info">You</div>
+                    Lorem ipsum dolor sit amet, vis erat denique in, dicunt prodesset te vix.
+                </div>
+            
+            </div>
+            <div class="chat-message-left pb-4 mx-3">
+                <div class="mx-2">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="rounded-circle mr-1" alt="Sharon Lessman" width="30" height="30">
+                </div>
+                <div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
+                    <div class="font-weight-bold mb-1 text-success">Sharon Lessman</div>
+                    Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+                    Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+                </div>
+            </div>
+
+            <div class="chat-message-right mb-4 mx-3">
+                <div class="mx-2">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle mr-1" alt="Chris Wood" width="30" height="30">
+                </div>
+                <div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                    <div class="font-weight-bold mb-1 text-info">You</div>
+                    Lorem ipsum dolor sit amet, vis erat denique in, dicunt prodesset te vix.
+                </div>
+            
+            </div>
+            <div class="chat-message-left pb-4 mx-3">
+                <div class="mx-2">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar3.png" class="rounded-circle mr-1" alt="Sharon Lessman" width="30" height="30">
+                </div>
+                <div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
+                    <div class="font-weight-bold mb-1 text-success">Sharon Lessman</div>
+                    Sed pulvinar, massa vitae interdum pulvinar, risus lectus porttitor magna, vitae commodo lectus mauris et velit.
+                    Proin ultricies placerat imperdiet. Morbi varius quam ac venenatis tempus.
+                </div>
+            </div>
+
+            <div class="chat-message-right mb-4 mx-3">
+                <div class="mx-2">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar1.png" class="rounded-circle mr-1" alt="Chris Wood" width="30" height="30">
+                </div>
+                <div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                    <div class="font-weight-bold mb-1 text-info">You</div>
+                    Lorem ipsum dolor sit amet, vis erat denique in, dicunt prodesset te vix.
+                </div>
+            
+            </div>
+        
+        </div>
+        <div style="height: 10%;" class="border d-flex justify-content-around align-items-center">
+            <input type="text" name="" id="" class="rounded border-info px-3 py-1" style="width: 80%;">
+            <input type="submit" value="Send" class="btn btn-secondary btn-sm px-4">
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+    body{margin-top:20px;}
+
+    .chat-online {
+        color: #34ce57
+    }
+    
+    .chat-offline {
+        color: #e4606d
+    }
+    
+    .chat-messages {
+        display: flex;
+        flex-direction: column;
+        max-height: 800px;
+        overflow-y: scroll
+    }
+    
+    .chat-message-left,
+    .chat-message-right {
+        display: flex;
+        flex-shrink: 0
+    }
+    
+    .chat-message-left {
+        margin-right: auto
+    }
+    
+    .chat-message-right {
+        flex-direction: row-reverse;
+        margin-left: auto
+    }
+    .py-3 {
+        padding-top: 1rem!important;
+        padding-bottom: 1rem!important;
+    }
+    .px-4 {
+        padding-right: 1.5rem!important;
+        padding-left: 1.5rem!important;
+    }
+    .flex-grow-0 {
+        flex-grow: 0!important;
+    }
+    .border-top {
+        border-top: 1px solid #dee2e6!important;
+    }
+    </style>
+
+{% endblock %}

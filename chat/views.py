@@ -5,9 +5,14 @@ from django.shortcuts import render, redirect
 
 
 # Create your views here.
+def test(request):
+    return render(request, 'chat.html')
 def register(request):
     if request.method == 'POST':
         username = request.POST.get('username')
+        if User.objects.filter(username=username).exists():
+            messages.error(request, 'Username already taken')
+            return redirect('register')
         user = User.objects.create_user(
             username=username,
             first_name='first name',
@@ -41,5 +46,14 @@ def home(request):
     return render(request, 'home.html', {'users': users})
 
 
-def room(request, room_name):
+def enter_room(request, user1_id, user2_id):
+    if user1_id > user2_id:
+        user1_id, user2_id = user2_id, user1_id
+    user1 = User.objects.get(id=user1_id)
+    user2 = User.objects.get(id=user2_id)
+    room_name = str(user1.username + '_chat_with_' + user2.username)
+#     return redirect('home')
+#
+#
+# def room(request, room_name):
     return render(request, 'chatroom.html', {'room_name': room_name})
